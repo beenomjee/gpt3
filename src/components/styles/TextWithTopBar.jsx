@@ -32,7 +32,7 @@ export default styled(myText)((props) => `
     &:before{
         content: "";
         position: absolute;
-        top: 0;
+        top: -10px;
         left: 0;
         width: 38px;
         height: 3px;

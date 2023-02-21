@@ -41,6 +41,14 @@ const MyHero = styled.div`
     margin-top: 70px;
     position: relative;
 
+    @media screen and (max-width: 1170px){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+
+    }
+
     .left{
        display: flex;
        flex-direction: column;
@@ -127,10 +135,45 @@ const MyHero = styled.div`
         line-height: 38px;
         color: #FFFFFF;
        }
+
+       @media screen and (max-width : 700px) {
+        max-width: 100%;
+        gap: 20px;
+        h1{
+            width: 100%;
+            font-size: 35px;
+            line-height: 45px;
+        }
+        p{
+            width: 100%;
+            font-size: 16px;
+            line-height: 23px;
+        }
+        
+        .input{
+            input{
+                width: 100%;
+                font-size: 16px;
+                line-height: 23px;
+                padding: 10px 20px
+            }
+        }
+        .avatars{
+            flex-direction: column;
+            p{
+                text-align: center;
+                line-height: normal;
+            }
+        }
+       }
     } 
 
     .right{
         position: relative;
+
+        @media screen and (max-width : 700px) {
+            width: 300px;
+        }
 
         .dotEffects{
             position: absolute;
@@ -216,17 +259,21 @@ const Hero = () => {
                     <p className="right">1,600 people requested access a visit in last 24 hours</p>
                 </div>
             </div>
-            <div className="right"><div className="dotEffects">
-                <span style={{ "--width": 2, "--left": 2, "--delay": 5 }}></span>
-                <span style={{ "--width": 4, "--left": 6, "--delay": 2 }}></span>
-                <span style={{ "--width": 3, "--left": 15, "--delay": 3 }}></span>
-                <span style={{ "--width": 1, "--left": 18, "--delay": 2.5 }}></span>
-                <span style={{ "--width": 6, "--left": 20, "--delay": 1 }}></span>
-                <span style={{ "--width": 2, "--left": 30, "--delay": 1.5 }}></span>
-                <span style={{ "--width": 4, "--left": 40, "--delay": 1.3 }}></span>
-                <span style={{ "--width": 2, "--left": 45, "--delay": 1.8 }}></span>
-
-            </div><img src="/heroImg.svg" alt="HERO" /><img src="/frame.png" alt="FRAME" /><div className="effect"></div></div>
+            <div className="right">
+                <div className="dotEffects">
+                    <span style={{ "--width": 2, "--left": 2, "--delay": 5 }}></span>
+                    <span style={{ "--width": 4, "--left": 6, "--delay": 2 }}></span>
+                    <span style={{ "--width": 3, "--left": 15, "--delay": 3 }}></span>
+                    <span style={{ "--width": 1, "--left": 18, "--delay": 2.5 }}></span>
+                    <span style={{ "--width": 6, "--left": 20, "--delay": 1 }}></span>
+                    <span style={{ "--width": 2, "--left": 30, "--delay": 1.5 }}></span>
+                    <span style={{ "--width": 4, "--left": 40, "--delay": 1.3 }}></span>
+                    <span style={{ "--width": 2, "--left": 45, "--delay": 1.8 }}></span>
+                </div>
+                <img src="/heroImg.svg" alt="HERO" />
+                <img src="/frame.png" alt="FRAME" />
+                <div className="effect"></div>
+            </div>
             <div className="effect"></div>
         </MyHero>
     )

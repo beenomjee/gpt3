@@ -6,10 +6,17 @@ import styled from 'styled-components'
 const MyContainer = styled.div`
     background-color: #042C54;
     padding: 60px;
-    margin-top: 130px;
+    margin: 130px auto 0 auto;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     position: relative;
     overflow: hidden;
+    
+    @media screen and (max-width: 1200px) {
+        margin: 130px 20px 0 20px;
+        @media screen and (max-width: 700px) {
+            padding: 40px 30px;
+        }
+    }
 
     .top{
         display: flex;
@@ -23,6 +30,22 @@ const MyContainer = styled.div`
             line-height: 30px;
             color: #81AFDD;
         }
+
+        @media screen and (max-width: 1170px) {
+            flex-direction: column;
+            gap: 20px;
+            @media screen and (max-width: 900px) {
+                p{
+                    width: auto;
+                }
+                @media screen and (max-width: 700px) {
+                    p{
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+       
     }
 
     .middle{
@@ -30,6 +53,18 @@ const MyContainer = styled.div`
         justify-content: space-between;
         align-items: flex-start;
         margin-top: 90px;
+
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+            gap: 20px;
+            @media screen and (max-width: 700px) {
+                margin-top: 50px;
+                h2{
+                    width: 100%;
+                }
+            }
+        }
+        
     }
 
     .bottom{
@@ -38,16 +73,24 @@ const MyContainer = styled.div`
         align-items: flex-start;
         gap: 40px;
         margin-top: 90px;
+        @media screen and (max-width: 900px) {
+            flex-direction: column;
+            gap: 60px;
+        }
         .column{
             flex : 1;
 
             p{
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 30px;
-            color: #81AFDD;
-            margin-top: 25px;
-        }
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 30px;
+                color: #81AFDD;
+                margin-top: 25px;
+
+                @media screen and (max-width: 900px) {
+                   margin-top: 0px;
+                }
+            }
         }
     }
 

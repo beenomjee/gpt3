@@ -5,12 +5,32 @@ import Text from '../styles/Text'
 const MyContainer = styled.div`
     margin-top: 150px;
 
+    @media screen and (max-width: 900px) {
+        margin-top: 100px;
+        h2{
+            font-size: 30px;
+            line-height: normal;
+            width: 100%;
+        }
+    }
+
     & > .bottom{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 50px;
         margin-top: 110px;
+        @media screen and (max-width: 900px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 50px;
+            
+            @media screen and (max-width: 500px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(1fr, 5);
+            }
+        }
 
         .blog{
             display: flex;
@@ -70,13 +90,22 @@ const MyContainer = styled.div`
         .blog:nth-child(1){
             grid-row-start: 1;
             grid-row-end: 3;
-
+            @media screen and (max-width: 900px) {
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
             .bottom{
                 flex: 1;
                 padding : 25px 25px;
 
                 h3{
                     font-size: 21px;
+                }
+                @media screen and (max-width: 900px) {
+                    padding : 7px 25px 25px 25px;
+                    h3{
+                        font-size: 19px;
+                    }
                 }
             }
         }

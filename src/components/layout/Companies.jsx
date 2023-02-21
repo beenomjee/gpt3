@@ -10,6 +10,9 @@ const MyContainer = styled.div`
     & > a > img{
         height: 24px;
     }
+    @media screen and (max-width : 700px) {
+        flex-direction: column;
+    }
 `
 
 const Companies = () => {

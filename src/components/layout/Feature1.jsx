@@ -10,6 +10,14 @@ const MyContainer = styled.div`
   gap: 140px;
   margin-top: 200px;
   position: relative;
+  @media screen and (max-width: 1170px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+    @media screen and (max-width: 1170px) {
+      gap: 70px;
+    }
+  }
 
   .left {
     flex: 1;
@@ -18,6 +26,22 @@ const MyContainer = styled.div`
       margin-top: 35px;
       display: inline-block;
     }
+    @media screen and (max-width: 1170px) {
+      h2{
+        text-align: center;
+      }
+      a{
+        display: block;
+        text-align: center;
+      }
+      @media screen and (max-width: 700px) {
+        h2{
+          width: 100%;
+          font-size: 25px;
+          line-height: 35px;
+        }
+      }
+    }
   }
   
   .right {
@@ -25,6 +49,17 @@ const MyContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    @media screen and (max-width: 1170px) {
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      
+      @media screen and (max-width: 700px) {
+        gap: 50px;
+      }
+    }
 
     .row{
       display: flex;
@@ -42,6 +77,17 @@ const MyContainer = styled.div`
         font-size: 14px;
         line-height: 24px;
         color: #81AFDD;
+      }
+      @media screen and (max-width: 700px) {
+        flex-direction: column;
+        align-items: flex-start;
+        h6{
+          width: 100%;
+          font-size: 16px;
+        }
+        p{
+          width: 100%;
+        }
       }
     }
   }

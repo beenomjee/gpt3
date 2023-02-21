@@ -20,12 +20,28 @@ const MyContainer = styled.div`
     align-items: flex-end;
     justify-content: space-between;
     gap: 30px;
+    @media screen and (max-width: 1170px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 120px;
+    }
+
 
     .left{
         width: 545px;
         height: 605px;
         position: relative;
         flex: 1;
+
+        @media screen and (max-width: 1170px) {
+            flex : none;
+            order: 2;
+        }
+        @media screen and (max-width: 700px) {
+            transform : scale(0.5);
+            margin : -127px  0;
+        }
 
         & > img{
             position: absolute;
@@ -96,11 +112,18 @@ const MyContainer = styled.div`
                 animation: ${circleAnimation} 1s infinite;
             }
         }
+
+    
     }
 
     .right{
         flex: 1;
         margin-bottom: 30px;
+
+        @media screen and (max-width: 1170px) {
+            flex : none;
+            order: 1;
+        }
 
         p{
             font-weight: 500;
@@ -111,6 +134,12 @@ const MyContainer = styled.div`
 
         h2{
             margin-top: 10px;
+
+            @media screen and (max-width: 700px) {
+                width: 100%;
+                font-size: 25px;
+                line-height: 35px;
+            }
         }
 
         .message{
@@ -119,6 +148,12 @@ const MyContainer = styled.div`
             line-height: 30px;
             color: #81AFDD;
             margin-top: 25px;
+            @media screen and (max-width: 1170px) {
+                width: 425px;
+                @media screen and (max-width: 700px) {
+                    width : 100%;
+                }
+            }
         }
 
         a{

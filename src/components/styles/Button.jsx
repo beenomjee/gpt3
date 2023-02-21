@@ -14,4 +14,9 @@ export default styled.button((props) => `
     &:hover  {
         opacity: 0.8;
     }
+
+    @media screen and (max-width : 700px){
+        font-size: 12px;
+        padding: 10px 20px;
+    }
 `)

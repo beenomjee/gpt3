@@ -124,8 +124,8 @@ const MyEffect = styled.div`
 const Header = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
 
-    const openNav = () => { setIsNavOpen(true); document.body.style.overflow = 'hidden'; }
-    const closeNav = () => { setIsNavOpen(false); document.body.style.overflow = 'unset'; }
+    const openNav = () => { setIsNavOpen(true); document.querySelector('html').style.overflowY = "hidden"; }
+    const closeNav = () => { setIsNavOpen(false); document.querySelector('html').setAttribute('style', ""); }
     return (
         <>
             <MyHeader className="container">

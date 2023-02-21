@@ -12,8 +12,17 @@ const MyFooter = styled.footer`
         justify-content: center;
         align-items: center;
 
+        @media screen and (max-width: 900px) {
+            padding: 100px 10px 0 10px;
+        }
+
         h2{
             text-align: center;
+            @media screen and (max-width: 900px) {
+                width: 100%;
+                font-size: 40px;
+                line-height: 50px;
+            }
         }
 
         button{
@@ -32,6 +41,9 @@ const MyFooter = styled.footer`
                 color: #031B34;
                 background-color: #FFFFFF;
             }
+            @media screen and (max-width: 900px) {
+                margin-top: 30px;
+            }
         }
     }
     & > .middle{
@@ -40,7 +52,18 @@ const MyFooter = styled.footer`
         align-items: flex-start;
         margin-top: 180px;
 
+        @media screen and (max-width: 900px) {
+            margin-top: 100px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+        }
+
         & > .left{
+            @media screen and (max-width: 900px) {
+                text-align: center;
+            }
             h6{
                 font-size: 30px;
                 font-weight: 800;
@@ -52,6 +75,10 @@ const MyFooter = styled.footer`
                 line-height: 14px;
                 color: #FFFFFF;
                 margin-top: 25px;
+                @media screen and (max-width: 900px) {
+                    width: 100%;
+                    margin-top: 10px;
+                }
             }
         }
         & > .right{
@@ -60,6 +87,12 @@ const MyFooter = styled.footer`
             align-items: flex-start;
             gap: 100px;
 
+            @media screen and (max-width: 900px) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 50px;
+            }
             & > .column{
                 display: flex;
                 flex-direction: column;
@@ -70,6 +103,10 @@ const MyFooter = styled.footer`
                     line-height: 16px;
                     color: #FFFFFF;
                     font-weight: 800;
+                    @media screen and (max-width: 900px) {
+                        width: 100%;
+                        text-align: center;
+                    }
                 }
 
                 & > a{
@@ -81,6 +118,10 @@ const MyFooter = styled.footer`
                     width: 116px;
                     &:hover{
                         text-decoration: underline;
+                    }
+                    @media screen and (max-width: 900px) {
+                        display: block;
+                        text-align: center;
                     }
                 }
 

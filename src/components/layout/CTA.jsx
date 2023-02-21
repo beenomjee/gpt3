@@ -9,7 +9,19 @@ const MyContainer = styled.div`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 11px;
     padding: 45px;
-    margin-top: 150px;
+    margin: 150px auto 0 auto;
+
+
+    @media screen and (max-width: 1200px) {
+        margin: 150px 20px 0 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 50px;
+        @media screen and (max-width: 700px) {
+            margin: 100px 20px 0 20px;
+            padding: 40px 30px;
+        }
+    }
 
     .left{
         p{
@@ -23,6 +35,9 @@ const MyContainer = styled.div`
             font-size: 24px;
             line-height: 45px;
             color: #000000;
+            @media screen and (max-width: 1170px) {
+                line-height: normal;
+            }
         }
     }
 
@@ -39,6 +54,7 @@ const MyContainer = styled.div`
             border-radius: 40px;
             cursor: pointer;
             transition: background-color 0.2s;
+            white-space: nowrap;
             &:hover{
                 background-color: #000000a4;
             }
